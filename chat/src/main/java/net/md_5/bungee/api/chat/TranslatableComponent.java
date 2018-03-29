@@ -16,7 +16,7 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
-public class TranslatableComponent extends BaseComponent
+public final class TranslatableComponent extends BaseComponent
 {
 
     private final ResourceBundle locales = ResourceBundle.getBundle( "mojang-translations/en_US" );
@@ -92,12 +92,6 @@ public class TranslatableComponent extends BaseComponent
     public BaseComponent duplicate()
     {
         return new TranslatableComponent( this );
-    }
-
-    @Override
-    public BaseComponent duplicateWithoutFormatting()
-    {
-        return new TranslatableComponent( this.translate, this.with );
     }
 
     /**
