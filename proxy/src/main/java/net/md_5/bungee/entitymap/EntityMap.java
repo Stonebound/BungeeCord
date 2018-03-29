@@ -201,7 +201,8 @@ public abstract class EntityMap
                     }
                     break;
                 default:
-                    throw new IllegalArgumentException( "Unknown meta type " + type );
+                    // ignore modded meta types
+                    // throw new IllegalArgumentException( "Unknown meta type " + type );
             }
         }
 
